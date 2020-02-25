@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div>
+      <span>Author:daykalif</span>
+    </div>
     <img src="./assets/logo.png">
     <router-view/>
   </div>
