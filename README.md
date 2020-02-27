@@ -22,3 +22,9 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+cnpm i stylus --save
+cnpm i stylus-loader --save
+
+gitub: vue-awesome-swiper   
+使用轮播插件：cnpm install vue-awesome-swiper@2.6.7 --save
