@@ -24,3 +24,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 cnpm i stylus --save
 cnpm i stylus-loader --save
+
+gitub: vue-awesome-swiper   
+使用轮播插件：cnpm install vue-awesome-swiper@2.6.7 --save
