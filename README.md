@@ -28,3 +28,9 @@ cnpm i stylus-loader --save
 
 gitub: vue-awesome-swiper   
 使用轮播插件：cnpm install vue-awesome-swiper@2.6.7 --save
+
+git add .
+git commit -m 'change'
+git push
+git checkout master
+git merge origin/feature/dev
