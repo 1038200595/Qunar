@@ -34,3 +34,6 @@ git commit -m 'add swiper-icons'
 git push
 git checkout master
 git merge origin/feature/release
+
+远端拉取最新代码分支（一般为master），然后由远端检出master分支到本地，
+本地new branch，然后将新分支推送到远端下到该分支，这样就在远端创建出了一个最新的分支
