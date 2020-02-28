@@ -37,3 +37,18 @@ git merge origin/feature/release
 
 远端拉取最新代码分支（一般为master），然后由远端检出master分支到本地，
 本地new branch，然后将新分支推送到远端下到该分支，这样就在远端创建出了一个最新的分支
+
+然后继续在远端的master分支拉取新分支
+
+cnpm i axios --save
+在本地/static/mock目录下新建index.json模拟数据，
+在config文件下的index.js文件添加：
+    proxyTable: {
+      '/api':{
+        target:'http://localhost:8080',
+        pathRewrite:{
+          '^/api':'/static/mock'
+        }
+      }
+    },
+将请求的api地址转发到本地的/static/mock目录下，然后重新运行npm run start

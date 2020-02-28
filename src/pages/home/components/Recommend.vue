@@ -17,25 +17,11 @@
 <script>
 export default {
     name:'HomeRecommend',
+    props:{
+        recommendList:Array
+    },
     data(){
-        return {
-            recommendList:[{
-                id:'0001',
-                imgUrl:'https://imgs.qunarzz.com/p/tts4/1809/9d/f8db3b5cb0007702.jpg_r_480x320x90_2f6b0821.jpg',
-                title:'上海-名古屋 5天自由行',
-                desc:'【自由行】确认后100%出行🎉赠一晚酒店💕上海🛫名古屋5-7日自由行🎁代办签证 '
-            },{
-                id:'0002',
-                imgUrl:'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/5a11974656794b4715156501be10c1b7.jpg',
-                title:'带娃出游，疲累与幸福同行',
-                desc:'厦门 ☆ 这里很美，而我们正好有空~'
-            },{
-                id:'0003',
-                imgUrl:'https://img1.qunarzz.com/sight/p0/1905/44/44c6db1f35f281f6a3.water.jpg_256x160_249fdf75.jpg',
-                title:'横店影视城5A景区',
-                desc:'浙江省金华东阳市横店镇横店影视城'
-            }]
-        }
+        return {}
     }
 }
 </script>
