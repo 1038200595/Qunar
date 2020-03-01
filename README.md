@@ -59,3 +59,7 @@ git commit -m 'add axios and matched data'
 git push  （当创建本地分支不是从远端同名分支拉取时，会提示git push origin HEAD:master或者git push origin HEAD）
 git checkout master
 git merge feature/ajax
+
+
+安装betterScroll与字母匹配
+cnpm install better-scroll -S
