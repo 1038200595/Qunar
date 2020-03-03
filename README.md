@@ -66,3 +66,6 @@ git merge feature/ajax
 
 安装betterScroll与字母匹配
 cnpm install better-scroll -S
+
+安装vuex
+cnpm i vuex --save
