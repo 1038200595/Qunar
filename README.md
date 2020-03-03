@@ -1,6 +1,9 @@
 # qunar
 
-慕课网
+该项目取自慕课网
+https://coding.imooc.com/learn/list/423.html
+账号：15657113537
+密码：Wjp78...
 Vue2.5 开发去哪儿网App 从零基础入门到实战项目
 Tuesday,February 25,2020
 >  
