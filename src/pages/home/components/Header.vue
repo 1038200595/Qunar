@@ -6,15 +6,22 @@
     <div class=header-input><span class="iconfont back-icon">&#xe7b3;</span>输入城市/景点/游玩主题</div>
     <router-link to="/city">
       <div class="header-right">
-        {{this.$store.state.city}}<span class="iconfont back-icon">&#xe7b2;</span>
+        {{this.city}}
+        <!-- {{this.doubleCity}} -->
+        <span class="iconfont back-icon">&#xe7b2;</span>
       </div>
     </router-link>
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex';
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  computed:{
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
+  }
 };
 </script>
 
@@ -44,7 +51,7 @@ export default {
       border-radius .1rem
       color:#ccc
     .header-right
-      width:1.24rem
+      min-width:1.04rem
       float:right
       text-align:center
       color:#fff
