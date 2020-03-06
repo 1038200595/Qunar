@@ -69,3 +69,12 @@ cnpm install better-scroll -S
 
 安装vuex
 cnpm i vuex --save
+
+
+
+package.json中添加--host 0.0.0.0，支持ip访问
+
+    "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
+
+
+cnpm i babel-polyfill -S

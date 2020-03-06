@@ -7,16 +7,24 @@ const path = require('path')
 module.exports = {
   dev: {
 
-    // Paths webpack-dev-server
+    // Paths webpack-dev-server   fiddler charles抓包工具
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      //'/api':{
+        //target:'http://localhost',//即'http://localhost:80'
+        // pathRewrite:{
+        //   '^/api':'/static/mock',//api开头的地址直接映射到/static/mock
+        // }
+      //},
+
       '/api':{
         target:'http://localhost:8080',
         pathRewrite:{
           '^/api':'/static/mock'
         }
       },
+
       // '/api':{
       //   target:'http://localhost:8081',
       //   pathRewrite:{
