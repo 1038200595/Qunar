@@ -71,7 +71,9 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    //如果想将打包的项目运行到后端的project目录下就可以写成 assetsPublicPath: '/project'
+    //线上访问的时候：https://www.daykalif.com/project就可以访问了
+    assetsPublicPath: '/',  
 
     /**
      * Source Maps

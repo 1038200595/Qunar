@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
 import Detail from '@/pages/detail/Detail'
 
@@ -19,11 +18,11 @@ export default new Router({
   routes: [{
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('@/pages/home/Home')  //异步组件按需加载，当js代码很大的时候，才建议使用异步组件，因为拆成异步组件会多请求一次
   },{
     path: '/city',
     name: 'City',
-    component: City
+    component: City   //普通方式加载组件
   },{
     path: '/detail/:id',
     name: 'Detail',
