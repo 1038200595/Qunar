@@ -49,13 +49,13 @@ export default {
             }
         }
     },
-    // mounted(){
-    //     this.getDetailInfo();
-    // },
-    //解决页面使用了keep-alive后，不会重新请求的问题
-    activated(){
+    mounted(){
         this.getDetailInfo();
-    }
+    },
+    //解决页面使用了keep-alive后，不会重新请求的问题
+    // activated(){
+    //     this.getDetailInfo();
+    // }
 }
 </script>
 

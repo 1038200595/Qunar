@@ -25,7 +25,8 @@ export default {
     },
     methods:{
         handleScroll:function(){
-            const top = document.documentElement.scrollTop;
+            // scrollTop的兼容性问题
+            const top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset;
             if(top > 60){
                 let opacity = top / 140;
                 opacity = opacity > 1 ? 1 : opacity
@@ -40,10 +41,11 @@ export default {
     },
     //页面使用了keep-alive后，多了两个生命周期钩子函数activated和deactivated
     //当全局window中绑定了事件，将在全局产生影响，所以在离开该页面时需要解绑事件
-    activated(){
+    // mounted()和destroyed()
+    mounted(){
         window.addEventListener('scroll',this.handleScroll);
     },
-    deactivated(){
+    destroyed(){
         window.removeEventListener('scroll',this.handleScroll);
     }
 }
