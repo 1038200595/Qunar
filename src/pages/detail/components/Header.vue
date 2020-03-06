@@ -66,6 +66,7 @@ export default {
             font-size 0.4rem
             line-height:.8rem
     .header-fixed-back
+        z-index :2
         position :fixed
         top:0
         left:0
