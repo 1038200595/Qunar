@@ -28,5 +28,8 @@ export default new Router({
     path: '/detail/:id',
     name: 'Detail',
     component: Detail
-  }]
+  }],
+  scrollBehavior(to, from, savedPosition) {   //解决页面滑动到底部时，别的页面也滑动到底部问题
+    return { x:0, y:0}
+  }
 })

@@ -1,16 +1,16 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="https://imgs.qunarzz.com/p/tts3/1709/41/becd3c7f9ee5a402.jpg_r_390x260x95_7bd04798.jpg"/>
+            <img class="banner-img" :src="bannerImg"/>
             <div class="banner-info">
-                <div class="banner-title">上海-泰国 6天4晚跟团游</div>
+                <div class="banner-title" v-text="sightName"></div>
                 <div class="banner-number">
                     <span class="iconfont back-icon banner-icon">&#xe69b;</span>
-                    39
+                    <span v-text="gallaryImgs.length"></span>
                 </div>
             </div>
         </div>
-        <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+        <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
     </div>
 </template>
 
@@ -18,10 +18,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
     name:'Banner',
+    props:{
+        sightName:String,
+        bannerImg:String,
+        gallaryImgs:Array
+    },
     data(){
         return{
             showGallary:false,
-            imgs:['https://imgs.qunarzz.com/vs_ceph_vs_tts/94998547-5efc-44ea-90b3-66c5cd6c0c46.jpg_r_390x260x90_20f66bbf.jpg','https://imgs.qunarzz.com/vs_ceph_vs_tts/57464b53-d00a-4b69-b9a5-a27e29155df7.jpg_r_390x260x90_7d5c68f4.jpg']
         }
     },
     methods:{
@@ -53,7 +57,7 @@ export default {
             right :0
             bottom:0
             line-height :.6rem
-            color:#000
+            color:#fff
             background-image:linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.3))
             .banner-title
                 font size 0.32rem
